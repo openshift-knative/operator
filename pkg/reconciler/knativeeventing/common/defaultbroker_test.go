@@ -54,7 +54,7 @@ func createupdateDefaultBrokerTests(t *testing.T) []updateDefaultBrokerTest {
 			defaultBrokerClass: "",
 			expected: makeConfigMap(t, "config-br-defaults", map[string]map[string]string{
 				"clusterDefault": {
-					"brokerClass": "ChannelBasedBroker",
+					"brokerClass": "MTChannelBasedBroker",
 					"apiVersion":  "v1",
 					"kind":        "ConfigMap",
 					"name":        "config-br-default-channel",
