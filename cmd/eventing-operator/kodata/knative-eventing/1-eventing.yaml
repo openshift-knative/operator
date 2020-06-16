@@ -683,7 +683,7 @@ spec:
           limits:
             # taken from serving.
             cpu: 200m
-            memory: 200Mi
+            memory: 1024Mi
         env:
         - name: SYSTEM_NAMESPACE
           valueFrom:
