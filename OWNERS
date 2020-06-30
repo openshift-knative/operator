@@ -1,7 +1,6 @@
 # The OWNERS file is used by prow to automatically merge approved PRs.
 
 approvers:
-- alanfx
 - aliok
 - bbrowning
 - devguyio
@@ -13,7 +12,6 @@ approvers:
 - warrenvw
 
 reviewers:
-- alanfx
 - aliok
 - bbrowning
 - devguyio
