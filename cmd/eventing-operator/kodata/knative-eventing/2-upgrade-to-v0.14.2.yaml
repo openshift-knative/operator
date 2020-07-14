@@ -15,6 +15,6 @@ spec:
       restartPolicy: Never
       containers:
       - name: upgrade-brokers
-        image: TO_BE_REPLACED
+        image: registry.svc.ci.openshift.org/openshift/knative-v0.14.2:knative-eventing-upgrade-v0-14-0
 
 ---
