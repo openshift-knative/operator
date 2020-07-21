@@ -613,8 +613,8 @@ github.com/mailru/easyjson v0.0.0-20190614124828-94de47d64c63/go.mod h1:C1wdFJiN
 github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e/go.mod h1:C1wdFJiN94OJF2b5HbByQZoLdCWB1Yqtg26g4irojpc=
 github.com/mailru/easyjson v0.7.1-0.20191009090205-6c0755d89d1e h1:jcoUdG1TzY/M/eM5BLFLP8DJeMximx5NQYSlLL9YeWc=
 github.com/mailru/easyjson v0.7.1-0.20191009090205-6c0755d89d1e/go.mod h1:KAzv3t3aY1NaHWoQz1+4F1ccyAH66Jk7yos7ldAVICs=
-github.com/manifestival/client-go-client v0.2.2 h1:yknizxAtVzR/gvFs90iG4mLi7MsyLXM+dpIrYAyn1Qg=
-github.com/manifestival/client-go-client v0.2.2/go.mod h1:lddTN8OB7VJAFaFXtMPHY/HP0G3uUp1cZJirE5x/Ct8=
+github.com/manifestival/client-go-client v0.2.3-0.20200702141517-e255fbf14f6f h1:ML7KZCOdaYQhTGj0hZAo0IVP62iCtMmjDYFwgU8VPLM=
+github.com/manifestival/client-go-client v0.2.3-0.20200702141517-e255fbf14f6f/go.mod h1:BISQjOz8kvcqMkGHFTRzO0hVEYolWScep7w1WT2bsV0=
 github.com/manifestival/manifestival v0.5.1-0.20200702141132-93669fa9179b h1:Je0eQ3VqreYrRlD7CZtYvYEPNPiALqZq7+V3tNDhGn0=
 github.com/manifestival/manifestival v0.5.1-0.20200702141132-93669fa9179b/go.mod h1:3Qq9cnPy7sv7FVhg2Kvw0ebb35R4OdctS4UjTjHlHm4=
 github.com/markbates/inflect v1.0.4/go.mod h1:1fR9+pO2KHEO9ZRtto13gDwwZaAKstQzferVeWqbgNs=
