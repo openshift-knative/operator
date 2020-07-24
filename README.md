@@ -12,3 +12,4 @@ Details:
 - [Installation](docs/installation.md)
 - [Configuration](docs/configuration.md)
 - [Development](docs/development.md)
+
