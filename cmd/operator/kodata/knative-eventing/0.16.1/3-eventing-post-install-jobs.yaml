@@ -6,6 +6,7 @@ metadata:
   labels:
     eventing.knative.dev/release: "v0.16.1"
 spec:
+  ttlSecondsAfterFinished: 600
   template:
     metadata:
       annotations:
