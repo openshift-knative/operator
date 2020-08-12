@@ -2645,7 +2645,7 @@ webhooks:
       name: eventing-webhook
       namespace: knative-eventing
   sideEffects: None
-  failurePolicy: Ignore
+  failurePolicy: Fail
   name: config.webhook.eventing.knative.dev
   namespaceSelector:
     matchExpressions:
@@ -2681,7 +2681,7 @@ webhooks:
       name: eventing-webhook
       namespace: knative-eventing
   sideEffects: None
-  failurePolicy: Ignore
+  failurePolicy: Fail
   name: webhook.eventing.knative.dev
 
 ---
@@ -2713,7 +2713,7 @@ webhooks:
       name: eventing-webhook
       namespace: knative-eventing
   sideEffects: None
-  failurePolicy: Ignore
+  failurePolicy: Fail
   name: validation.webhook.eventing.knative.dev
 
 ---
