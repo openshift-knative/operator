@@ -706,7 +706,7 @@ spec:
           # will NOT be considered by the sinkbinding webhook.
           # The default is `exclusion`.
         - name: SINK_BINDING_SELECTION_MODE
-          value: "exclusion"
+          value: "inclusion"
         securityContext:
           allowPrivilegeEscalation: false
         ports:
@@ -2833,7 +2833,7 @@ webhooks:
     service:
       name: eventing-webhook
       namespace: knative-eventing
-  failurePolicy: Fail
+  failurePolicy: Ignore
   sideEffects: None
   name: sinkbindings.webhook.sources.knative.dev
   timeoutSeconds: 2
