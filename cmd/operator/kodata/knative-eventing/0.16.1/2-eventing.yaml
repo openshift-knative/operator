@@ -2832,7 +2832,7 @@ webhooks:
     service:
       name: eventing-webhook
       namespace: knative-eventing
-  failurePolicy: Ignore
+  failurePolicy: Fail
   sideEffects: None
   name: sinkbindings.webhook.sources.knative.dev
   timeoutSeconds: 2
