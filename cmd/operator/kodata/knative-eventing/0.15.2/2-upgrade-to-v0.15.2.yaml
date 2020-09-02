@@ -16,6 +16,6 @@ spec:
       restartPolicy: Never
       containers:
       - name: upgrade-brokers
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/upgrade/v0.15.0@sha256:9447ebb06cd9d516e03ca3f42e8c374ab50226ff3affbd283490d56ee8189521
+        image: registry.svc.ci.openshift.org/openshift/knative-v0.15.2:knative-eventing-upgrade-v0-15-0
 
 ---
