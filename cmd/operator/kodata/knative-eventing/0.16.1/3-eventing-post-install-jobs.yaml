@@ -16,7 +16,7 @@ spec:
       restartPolicy: Never
       containers:
       - name: brokers
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/v0.16/broker-cleanup@sha256:b7915f9ff75e90b728c2ccc85417d593ea2025609585c980a1bd0b0fdeeff98d
+        image: TO_BE_REPLACED
         env:
         - name: SYSTEM_NAMESPACE
           valueFrom:
