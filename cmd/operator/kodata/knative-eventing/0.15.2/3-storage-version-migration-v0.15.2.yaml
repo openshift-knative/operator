@@ -136,7 +136,7 @@ spec:
       - name: migrate
         # This is the Go import path for the binary that is containerized
         # and substituted here.
-        image: gcr.io/knative-releases/knative.dev/eventing/vendor/knative.dev/pkg/apiextensions/storageversion/cmd/migrate@sha256:9ca91a8320d0c705c600264cbfff1883f02ef93e61042e88be3fadd21fc31212
+        image: TO_BE_REPLACED
         args:
         - "parallels.flows.knative.dev"
         - "sequences.flows.knative.dev"

@@ -599,7 +599,7 @@ spec:
       containers:
       - name: eventing-controller
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/controller@sha256:e22a23e05e8344e5126c10737625270db3d32f36da67c6e8b6020fa777723571
+        image: TO_BE_REPLACED
         resources:
           requests:
             cpu: 100m
@@ -617,12 +617,12 @@ spec:
           value: knative.dev/eventing
         - # PingSource
           name: PING_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/ping@sha256:d6fc16b77a8682dfba7305ac8c19f43e284e565bb7e49a72663e30291ad861e7
+          value: TO_BE_REPLACED
         - name: MT_PING_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/mtping@sha256:241b67af3851850d069f320c731c62617182eb8553c12df6ccf359a6ce9f02ee
+          value: TO_BE_REPLACED
         - # APIServerSource
           name: APISERVER_RA_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/apiserver_receive_adapter@sha256:e1026918aa15f2f188bacd49b13355d9dc99c6c5420d8c91500999deb4fae411
+          value: TO_BE_REPLACED
         securityContext:
           allowPrivilegeEscalation: false
         ports:
@@ -669,7 +669,7 @@ spec:
         terminationMessagePolicy: FallbackToLogsOnError
         # This is the Go import path for the binary that is containerized
         # and substituted here.
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/webhook@sha256:88c21c79a606e5feb03f43739cece8ab9ea59831af5aa7fe17c07659e2d44342
+        image: TO_BE_REPLACED
         resources:
           requests:
             # taken from serving.
@@ -3002,7 +3002,7 @@ spec:
       containers:
       - name: broker-controller
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/channel_broker@sha256:cd2cee6463842c547a14ff0f62806370959b9e16a6fc82409c7781462a06c4bf
+        image: TO_BE_REPLACED
         resources:
           requests:
             cpu: 100m
@@ -3020,11 +3020,11 @@ spec:
           value: knative.dev/eventing
         - # Broker
           name: BROKER_INGRESS_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/ingress@sha256:09e5ea1b066a8dea31de60ed46c323a48dd87323994a48e37c0c2d632e6982f5
+          value: TO_BE_REPLACED
         - name: BROKER_INGRESS_SERVICE_ACCOUNT
           value: eventing-broker-ingress
         - name: BROKER_FILTER_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/filter@sha256:508a24a308f833f63b55dd8724942be02f1751c15b23ac6eef21af0b0cfe3ca1
+          value: TO_BE_REPLACED
         - name: BROKER_FILTER_SERVICE_ACCOUNT
           value: eventing-broker-filter
         - name: BROKER_IMAGE_PULL_SECRET_NAME
@@ -3319,7 +3319,7 @@ spec:
       containers:
       - name: filter
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtbroker/filter@sha256:d1280e3194016843d6817540355e4ba415197a55f21de67d8b64bcb535c72452
+        image: TO_BE_REPLACED
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -3427,7 +3427,7 @@ spec:
       containers:
       - name: ingress
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtbroker/ingress@sha256:505575200a6aa053b0773cc566153882a9c31658da6fdd7aa41e26fc4c5f258a
+        image: TO_BE_REPLACED
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -3536,7 +3536,7 @@ spec:
       containers:
       - name: mt-broker-controller
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtchannel_broker@sha256:04f3dc50d6b05fbf05685537b60ab0a18eb5f6f1029de0046d03284f3a855128
+        image: TO_BE_REPLACED
         resources:
           requests:
             cpu: 100m
@@ -4115,7 +4115,7 @@ spec:
       serviceAccountName: imc-controller
       containers:
       - name: controller
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_controller@sha256:5a42c1c71b56eec1d755ee808ebe190df4a82bd03be5fb6682aff6dbbd337189
+        image: TO_BE_REPLACED
         env:
         - name: CONFIG_LOGGING_NAME
           value: config-logging
@@ -4128,7 +4128,7 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         - name: DISPATCHER_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:e7c35b3b1e6ad777661bc5c5361011af42779c7faf917c365ac8af339f51d35e
+          value: TO_BE_REPLACED
         securityContext:
           allowPrivilegeEscalation: false
         ports:
@@ -4172,7 +4172,7 @@ spec:
       serviceAccountName: imc-dispatcher
       containers:
       - name: dispatcher
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:e7c35b3b1e6ad777661bc5c5361011af42779c7faf917c365ac8af339f51d35e
+        image: TO_BE_REPLACED
         env:
         - name: CONFIG_LOGGING_NAME
           value: config-logging
