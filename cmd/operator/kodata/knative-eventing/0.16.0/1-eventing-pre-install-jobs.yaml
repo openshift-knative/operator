@@ -279,7 +279,7 @@ spec:
       - name: migrate
         # This is the Go import path for the binary that is containerized
         # and substituted here.
-        image: gcr.io/knative-releases/knative.dev/eventing/vendor/knative.dev/pkg/apiextensions/storageversion/cmd/migrate@sha256:9590c747c81763027b8b8df12a4f66787ff693570f0a8b482b7a301b328157c0
+        image: TO_BE_REPLACED
         args:
         - "brokers.eventing.knative.dev"
         - "pingsources.sources.knative.dev"
