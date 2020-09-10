@@ -16,7 +16,7 @@ spec:
       restartPolicy: Never
       containers:
       - name: pingsource
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/v0.17/pingsource-cleanup@sha256:8ee9f443cfa7f32ca32bede95521680f0679358676403640dcc12dd02689d25d
+        image: TO_BE_REPLACED
         env:
         - name: SYSTEM_NAMESPACE
           valueFrom:

@@ -603,7 +603,7 @@ spec:
       containers:
       - name: eventing-controller
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/controller@sha256:0185928c7d2b94b4892fa920a3243c8465b41cc17913a6c9f2c85b98ed15b3bc
+        image: TO_BE_REPLACED
         resources:
           requests:
             cpu: 100m
@@ -621,12 +621,12 @@ spec:
           value: knative.dev/eventing
         - # PingSource
           name: PING_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/ping@sha256:71c81707d7af93d014d89eca6289a5b103180276c092e9c68d2a2494d4e11e57
+          value: TO_BE_REPLACED
         - name: MT_PING_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/mtping@sha256:1a3237ec29f579483ff741906a8e619df8e273c1bfece0b30bc2f7f0fbe77294
+          value: TO_BE_REPLACED
         - # APIServerSource
           name: APISERVER_RA_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/apiserver_receive_adapter@sha256:e2ee4ad47d45fb9fd03692d454bf1ad0175260c772115df2dd997cbefbdf2043
+          value: TO_BE_REPLACED
         securityContext:
           allowPrivilegeEscalation: false
         ports:
@@ -683,7 +683,7 @@ spec:
         terminationMessagePolicy: FallbackToLogsOnError
         # This is the Go import path for the binary that is containerized
         # and substituted here.
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/webhook@sha256:70bffdff69d2a3ea3d67063d61555ed8419cdd8394f9819c2351741ec964a949
+        image: TO_BE_REPLACED
         resources:
           requests:
             # taken from serving.

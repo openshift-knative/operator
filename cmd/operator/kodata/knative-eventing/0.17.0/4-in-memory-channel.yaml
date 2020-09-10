@@ -506,7 +506,7 @@ spec:
       serviceAccountName: imc-controller
       containers:
       - name: controller
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_controller@sha256:7649888fca4e4ab693c6f0ad51296065cf6682cbafe7455efedab3b80bb00c4a
+        image: TO_BE_REPLACED
         env:
         - name: CONFIG_LOGGING_NAME
           value: config-logging
@@ -519,7 +519,7 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         - name: DISPATCHER_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:8e8763fd783a213f1836b1c70bbf7d6803ba57b6bc2021c2b1d78afb321b621b
+          value: TO_BE_REPLACED
         securityContext:
           allowPrivilegeEscalation: false
         ports:
@@ -564,7 +564,7 @@ spec:
       serviceAccountName: imc-dispatcher
       containers:
       - name: dispatcher
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:8e8763fd783a213f1836b1c70bbf7d6803ba57b6bc2021c2b1d78afb321b621b
+        image: TO_BE_REPLACED
         env:
         - name: CONFIG_LOGGING_NAME
           value: config-logging

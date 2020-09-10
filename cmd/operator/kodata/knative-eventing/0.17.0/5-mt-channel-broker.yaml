@@ -285,7 +285,7 @@ spec:
       containers:
       - name: filter
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtbroker/filter@sha256:c3fcf096439ef7cd438b97f44e0318ca6d94b73c47953de768c92de584dbcd3c
+        image: TO_BE_REPLACED
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -393,7 +393,7 @@ spec:
       containers:
       - name: ingress
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtbroker/ingress@sha256:1af3d594ca277ae16c94279506c1786851b1e4c504539fa2840f777c61cb8876
+        image: TO_BE_REPLACED
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -512,7 +512,7 @@ spec:
       containers:
       - name: mt-broker-controller
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtchannel_broker@sha256:214355f1087b88ddcec0220059313fa9244ea3696d5d90c23ea3bd296b5e18b4
+        image: TO_BE_REPLACED
         resources:
           requests:
             cpu: 100m
