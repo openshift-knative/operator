@@ -2173,7 +2173,7 @@ metadata:
     rbac.authorization.k8s.io/aggregate-to-edit: "true"
     eventing.knative.dev/release: "v0.16.1"
 rules:
-- apiGroups: ["eventing.knative.dev", "messaging.knative.dev", "flows.knative.dev"]
+- apiGroups: ["eventing.knative.dev", "messaging.knative.dev", "sources.knative.dev", "flows.knative.dev", "bindings.knative.dev"]
   resources: ["*"]
   verbs: ["create", "update", "patch", "delete"]
 ---
