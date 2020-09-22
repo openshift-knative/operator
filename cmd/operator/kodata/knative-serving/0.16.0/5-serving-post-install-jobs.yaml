@@ -18,7 +18,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: storage-version-migration-
+  name: storage-version-migration-serving-0.16.0
   namespace: knative-serving
   labels:
     app: "storage-version-migration"
