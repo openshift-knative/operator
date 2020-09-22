@@ -2171,12 +2171,24 @@ rules:
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
+  name: knative-bindings-namespaced-admin
+  labels:
+    eventing.knative.dev/release:  "v0.15.2"
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+rules:
+  - apiGroups: ["bindings.knative.dev"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
   name: knative-eventing-namespaced-edit
   labels:
     rbac.authorization.k8s.io/aggregate-to-edit: "true"
     eventing.knative.dev/release: "v0.15.2"
 rules:
-- apiGroups: ["eventing.knative.dev", "messaging.knative.dev", "flows.knative.dev"]
+- apiGroups: ["eventing.knative.dev", "messaging.knative.dev", "sources.knative.dev", "flows.knative.dev", "bindings.knative.dev"]
   resources: ["*"]
   verbs: ["create", "update", "patch", "delete"]
 ---
