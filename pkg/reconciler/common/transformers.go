@@ -25,6 +25,11 @@ import (
 // transformers that are common to all components.
 func transformers(ctx context.Context, obj v1alpha1.KComponent) []mf.Transformer {
 	logger := logging.FromContext(ctx)
+
+	// TODO: Openshift Hack: Take image registry from environment instead of CR
+	imagesFromEnviron(obj)
+	logger.Infof("Openshift specific image override: %v", obj.GetSpec().GetRegistry())
+
 	return []mf.Transformer{
 		mf.InjectOwner(obj),
 		mf.InjectNamespace(obj.GetNamespace()),
