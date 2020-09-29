@@ -9,11 +9,11 @@ import (
 
 const imagePrefix = "IMAGE_"
 
-// imagesFromEnviron overrides registry images
-func imagesFromEnviron(obj v1alpha1.KComponent) {
+// configureImagesFromEnvironment overrides registry images
+func configureImagesFromEnvironment(obj v1alpha1.KComponent) {
 	reg := obj.GetSpec().GetRegistry()
 
-	reg.Override = imageMapFromEnvironment()
+	reg.Override = imageMapFromEnvironment(os.Environ())
 
 	if defaultVal, ok := reg.Override["default"]; ok {
 		reg.Default = defaultVal
@@ -26,12 +26,16 @@ func imagesFromEnviron(obj v1alpha1.KComponent) {
 	}
 }
 
-func imageMapFromEnvironment() map[string]string {
+func imageMapFromEnvironment(env []string) map[string]string {
 	overrideMap := map[string]string{}
 
-	for _, e := range os.Environ() {
+	for _, e := range env {
 		pair := strings.SplitN(e, "=", 2)
 		if strings.HasPrefix(pair[0], imagePrefix) {
+			if pair[1] == "" {
+				continue
+			}
+
 			// convert
 			// "IMAGE_container=docker.io/foo"
 			// "IMAGE_deployment__container=docker.io/foo2"
@@ -44,22 +48,15 @@ func imageMapFromEnvironment() map[string]string {
 			// deployment/env_var: docker.io/foo4
 			name := strings.TrimPrefix(pair[0], imagePrefix)
 			name = strings.Replace(name, "__", "/", 1)
-			if pair[1] != "" {
-				overrideMap[name] = pair[1]
-			}
+			overrideMap[name] = pair[1]
 		}
 	}
 	return overrideMap
 }
 
-func configure(ks *v1alpha1.KnativeServing, cm, key, value string) bool {
+func configure(ks *v1alpha1.KnativeServing, cm, key, value string) {
 	if ks.Spec.Config == nil {
 		ks.Spec.Config = map[string]map[string]string{}
-	}
-
-	old, found := ks.Spec.Config[cm][key]
-	if found && value == old {
-		return false
 	}
 
 	if ks.Spec.Config[cm] == nil {
@@ -67,5 +64,4 @@ func configure(ks *v1alpha1.KnativeServing, cm, key, value string) bool {
 	}
 
 	ks.Spec.Config[cm][key] = value
-	return true
 }

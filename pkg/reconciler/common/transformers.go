@@ -27,7 +27,7 @@ func transformers(ctx context.Context, obj v1alpha1.KComponent) []mf.Transformer
 	logger := logging.FromContext(ctx)
 
 	// TODO: Openshift Hack: Take image registry from environment instead of CR
-	imagesFromEnviron(obj)
+	configureImagesFromEnvironment(obj)
 	logger.Infof("Openshift specific image override: %v", obj.GetSpec().GetRegistry())
 
 	return []mf.Transformer{
