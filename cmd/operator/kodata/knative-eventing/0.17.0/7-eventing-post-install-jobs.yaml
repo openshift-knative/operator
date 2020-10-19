@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: v0.17.0-pingsource-cleanup
+  name: v0.17-pingsource-cleanup
   namespace: knative-eventing
   labels:
     eventing.knative.dev/release: "v0.17.0"
