@@ -286,16 +286,18 @@ spec:
       - name: filter
         terminationMessagePolicy: FallbackToLogsOnError
         image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtbroker/filter@sha256:240e981ab14feb183af126addb78de8fb9480d8b9f5b91a04616a7b264f86fd9
-        livenessProbe:
+        readinessProbe: &probe
           failureThreshold: 3
           httpGet:
             path: /healthz
             port: 8080
             scheme: HTTP
-          initialDelaySeconds: 5
           periodSeconds: 2
           successThreshold: 1
           timeoutSeconds: 1
+        livenessProbe:
+          <<: *probe
+          initialDelaySeconds: 5
         resources:
           requests:
             cpu: 100m
@@ -394,16 +396,18 @@ spec:
       - name: ingress
         terminationMessagePolicy: FallbackToLogsOnError
         image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtbroker/ingress@sha256:a38342850018735caefa37b26b97ca937496cc0f770dd73d00026300a0d4ef5c
-        livenessProbe:
+        readinessProbe: &probe
           failureThreshold: 3
           httpGet:
             path: /healthz
             port: 8080
             scheme: HTTP
-          initialDelaySeconds: 5
           periodSeconds: 2
           successThreshold: 1
           timeoutSeconds: 1
+        livenessProbe:
+          <<: *probe
+          initialDelaySeconds: 5
         resources:
           requests:
             cpu: 100m
